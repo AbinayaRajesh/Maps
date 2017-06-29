@@ -45,8 +45,7 @@ import permissions.dispatcher.RuntimePermissions;
 import static com.google.android.gms.location.LocationServices.getFusedLocationProviderClient;
 
 @RuntimePermissions
-public class MapDemoActivity extends AppCompatActivity implements
-        GoogleMap.OnMapLongClickListener {
+public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMapLongClickListener {
 
     private SupportMapFragment mapFragment;
     private GoogleMap map;
@@ -184,6 +183,10 @@ public class MapDemoActivity extends AppCompatActivity implements
                 public void onMapReady(GoogleMap map) {
                     loadMap(map);
                     map.setInfoWindowAdapter(new CustomWindowAdapter(getLayoutInflater()));
+                    // Supported types include: MAP_TYPE_NORMAL, MAP_TYPE_SATELLITE
+                    // MAP_TYPE_TERRAIN, MAP_TYPE_HYBRID
+                    map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+
                 }
             });
         } else {
