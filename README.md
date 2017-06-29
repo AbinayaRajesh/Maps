@@ -1,3 +1,6 @@
+
+Created by Dalya Dickstein and Abinaya Rajesh
+
 android-google-maps-demo
 ========================
 
